@@ -8,12 +8,12 @@ import datetime
 app = Flask(__name__)
 
 # Config MySQL
-app.config['MYSQL_HOST'] = ''
-app.config['MYSQL_USER'] = ''
+app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = ''
 app.config['MYSQL_DB'] = 'myflaskapp'
-app.config['MYSQL_CURSORCLASS'] = ''
-app.config['SECRET_KEY'] = ''
+app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
+app.config['SECRET_KEY'] = 'your_secret_key'
 
 # Init MySQL
 mysql = MySQL(app)
